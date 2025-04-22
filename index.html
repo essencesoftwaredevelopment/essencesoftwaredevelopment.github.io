@@ -42,6 +42,9 @@
             top: 0;
             z-index: 100;
             background-color: rgba(0, 0, 0, 0.9);
+            background-image: url('https://your-header-image-url.com/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .header-content {
@@ -85,13 +88,47 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/800') center/cover no-repeat;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .hero-video-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
         }
 
         .hero-content {
             width: 100%;
             max-width: 800px;
+            text-align: left;
+            padding-left: 50px;
         }
 
         .hero h1 {
@@ -480,11 +517,16 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="internetmoney.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <div class="container hero-content">
             <div class="tag">For Elite Operators</div>
-            <h1>Play the game harder, smarter, louder.</h1>
-            <p>Equipping high-performance entrepreneurs with premium tools and content that match your savage ambition.
-            </p>
+            <h1>Apparel for the elite operator</h1>
+            <p>Equipping high-performance entrepreneurs with premium attire and products that fuel hyper-growth</p>
             <a href="#join" class="cta-btn">Get Started Now</a>
         </div>
     </section>
