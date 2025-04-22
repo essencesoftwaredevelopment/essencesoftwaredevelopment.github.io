@@ -87,7 +87,7 @@
         .hero {
             height: 100vh;
             display: flex;
-            align-items: center;
+            /* align-items: center; */
             position: relative;
             overflow: hidden;
         }
@@ -125,10 +125,21 @@
         }
 
         .hero-content {
-            width: 100%;
-            max-width: 800px;
+            display: flex;
+            /* background-color: #f5f5f5; */
+            /* Ensure flexbox is applied */
+            flex-direction: column;
+            /* Stack elements vertically */
+            align-items: flex-start;
+            /* Align items to the start (left) */
+            justify-content: center;
+            /* Center content vertically */
+            width: 100vw;
+            /* max-width: 800px; */
             text-align: left;
+            /* Align text to the left */
             padding-left: 50px;
+            /* Add padding to the left */
         }
 
         .hero h1 {
@@ -222,6 +233,58 @@
             color: #cccccc;
         }
 
+        /* Vertical column alignment */
+        .social-proof-container {
+            /* display: flex; */
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .social-proof .social-stars {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .social-proof .star {
+            color: var(--white);
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .social-proof .social-text {
+            font-size: 16px;
+            color: #cccccc;
+            margin-right: 20px;
+        }
+
+        /* Social Faces */
+        .social-faces {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            /* overlap components */
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .face {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+
+
         /* Products Section */
         .products {
             padding: 120px 0;
@@ -272,7 +335,7 @@
 
         .product-price {
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 200;
             margin-bottom: 20px;
         }
 
@@ -528,6 +591,79 @@
             <h1>Apparel for the elite operator</h1>
             <p>Equipping high-performance entrepreneurs with premium attire and products that fuel hyper-growth</p>
             <a href="#join" class="cta-btn">Get Started Now</a>
+
+            <div class="social-proof-container">
+                <div class="social-proof">
+                    <div class="social-stars">
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                    </div>
+                    <div class="social-text">Trusted by 5,000+ elite operators</div>
+                </div>
+                <div class="social-faces">
+                    <div class="face"><img
+                            src="https://framerusercontent.com/images/A9yDsgwTh3OO67FElg38aoUcss.png?scale-down-to=40"
+                            alt="User"></div>
+                    <div class="face"><img
+                            src="https://framerusercontent.com/images/TBLz0Lu9o40Zj8uIV3otent2bO0.png?scale-down-to=40"
+                            alt="User"></div>
+                    <div class="face"><img
+                            src="https://framerusercontent.com/images/ps4bAOh2DvCAonhUVGMYUKvgA.png?scale-down-to=40"
+                            alt="User"></div>
+                    <div class="face"><img
+                            src="https://framerusercontent.com/images/HmNo1l731HXRdoNKhSwueJmHkqA.png?scale-down-to=40"
+                            alt="User"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Premium Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="mouth_tape.png" alt="NightSeal Performance Tape">
+                    </div>
+                    <div class="product-content">
+                        <h3>NightSeal Performance Tape</h3>
+                        <p>Complete system for scaling your operation with ruthless efficiency. The exact frameworks
+                            used by Marbella's top performers.</p>
+                        <div class="product-price">€99</div>
+                        <a href="#" class="secondary-btn">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="shorts.jpg" alt="Series Shorts">
+                    </div>
+                    <div class="product-content">
+                        <h3>Series Shorts</h3>
+                        <p>Premium Notion templates for tracking revenue, automating workflows, and managing client
+                            projects like a savage.</p>
+                        <div class="product-price">€69</div>
+                        <a href="#" class="secondary-btn">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="top.jpg" alt="Apex Compression Cut">
+                    </div>
+                    <div class="product-content">
+                        <h3>Apex Compression Cut</h3>
+                        <p>The definitive guide to developing the psychological edge that separates winners from the
+                            rest. Rewire for dominance.</p>
+                        <div class="product-price">€79</div>
+                        <a href="#" class="secondary-btn">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -555,51 +691,6 @@
                     <h3>Style</h3>
                     <p>Stand out with undeniable presence. Command respect and attention with a brand that exudes
                         luxury, confidence, and uncompromising standards.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products -->
-    <section class="products" id="products">
-        <div class="container">
-            <h2 class="section-title">Premium Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="/api/placeholder/300/200" alt="Operator's Playbook">
-                    </div>
-                    <div class="product-content">
-                        <h3>Operator's Playbook</h3>
-                        <p>Complete system for scaling your operation with ruthless efficiency. The exact frameworks
-                            used by Marbella's top performers.</p>
-                        <div class="product-price">€299</div>
-                        <a href="#" class="secondary-btn">Coming Soon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="/api/placeholder/300/200" alt="Elite Systems">
-                    </div>
-                    <div class="product-content">
-                        <h3>Elite Systems Notion Pack</h3>
-                        <p>Premium Notion templates for tracking revenue, automating workflows, and managing client
-                            projects like a savage.</p>
-                        <div class="product-price">€149</div>
-                        <a href="#" class="secondary-btn">Coming Soon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="/api/placeholder/300/200" alt="Marbella Mindset">
-                    </div>
-                    <div class="product-content">
-                        <h3>Marbella Mindset</h3>
-                        <p>The definitive guide to developing the psychological edge that separates winners from the
-                            rest. Rewire for dominance.</p>
-                        <div class="product-price">€99</div>
-                        <a href="#" class="secondary-btn">Coming Soon</a>
-                    </div>
                 </div>
             </div>
         </div>
